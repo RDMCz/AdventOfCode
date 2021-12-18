@@ -1,3 +1,5 @@
+// Tenhle kód je pěkně nechutnej, funguje na první přehyb, pro více už ale (nejspíš) začne dávat špatné hodnoty
+
 package aoc2021;
 
 import java.util.ArrayList;
