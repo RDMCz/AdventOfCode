@@ -9,6 +9,7 @@ public class d13p2 {
         
         String[] input = AoC2021.loadFile("d13p2");
         
+        boolean part1 = false;
         List<Integer> inXs = new ArrayList<>();
         List<Integer> inYs = new ArrayList<>();
         List<String> instructions = new ArrayList<>();
@@ -79,8 +80,19 @@ public class d13p2 {
                 
                 maxX = value;
             }
+            if (!part1) {
+                int result = 0;
+                for (int i = 0; i < maxY; i++) {
+                    for (int j = 0; j < maxX; j++) {
+                        if (paper[i][j]) result++;
+                    }                    
+                }
+                System.out.println("Part 1: " + result);
+                part1 = true;
+            }
         }
         
+        System.out.println("Part 2:");
         // Vykresli
         for (int i = 0; i < maxY; i++) {
             for (int j = 0; j < maxX; j++) {
