@@ -27,5 +27,12 @@ int main() {
 	//aoc.day14part1();
 	//aoc.day14part2();
 	//aoc.day15part1();
+	//aoc.day17part1();
+	//aoc.day18part1();
+	//aoc.day20part1();
+	//aoc.day20part2();
+	//aoc.day21();
+	//aoc.day22part1();
+	//aoc.day22part2();
 	return 0;
 }

@@ -47,8 +47,7 @@ const void AdventOfCode::day11part1() {
 				newMonkey->ifFalse = line[30] - '0';
 			}
 		}
-		*(monkeys + i) = newMonkey;
-		Day11Monkey* mp = *(monkeys + i);
+		*(monkeys + i) = newMonkey;		
 		inspections.push_back(0);
 	}
 
@@ -136,8 +135,7 @@ const void AdventOfCode::day11part2() {
 			}
 		}
 		newMonkey->testNum = Day11Part2Item::basises[i];
-		*(monkeys + i) = newMonkey;
-		Day11Monkey* mp = *(monkeys + i);
+		*(monkeys + i) = newMonkey;		
 		inspections.push_back(0);
 	}
 

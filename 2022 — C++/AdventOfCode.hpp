@@ -6,6 +6,7 @@
 #include <queue>
 #include <tuple>
 #include <set>
+#include <unordered_map>
 
 class AdventOfCode {
 private:
@@ -39,6 +40,13 @@ public:
 	const void day14part1();
 	const void day14part2();
 	const void day15part1();
+	const void day17part1();
+	const void day18part1();
+	const void day20part1();
+	const void day20part2();
+	const void day21();
+	const void day22part1();
+	const void day22part2();
 };
 
 class Day07Directory {
@@ -78,4 +86,47 @@ struct Day12PQElement {
 	int combined;
 	Day12PQElement(int y, int x, int combined);
 	bool operator<(const struct Day12PQElement& other) const;
+};
+
+struct Day18Cube {
+	int x, y, z;
+	bool visibleSides[6];
+	Day18Cube(int x, int y, int z);
+	const void updateSides(int x, int y, int z);
+};
+
+struct Day20RingElement {
+	int value;
+	Day20RingElement* next;
+	Day20RingElement* prev;
+};
+
+struct Day20Part2RingElement {
+	long long value;
+	Day20Part2RingElement* next;
+	Day20Part2RingElement* prev;
+};
+
+struct Day21Monkey {
+	std::string value;
+	Day21Monkey* left;
+	Day21Monkey* right;
+	long long valuell;
+	Day21Monkey* parent;
+	bool isLeft;
+};
+
+class Day21Tree {
+private:
+	std::unordered_map<std::string, std::string> map;
+	Day21Monkey* root;
+	Day21Monkey* humn;
+	std::vector<Day21Monkey*> monkeys;
+	const void emplaceMonkeys(Day21Monkey* m);
+	const long long evaluate(Day21Monkey* m) const;
+	const void getPathToHumn(std::string& result, Day21Monkey* m) const;
+	const void evaluateHumn(std::string& pathToHumn, Day21Monkey* m, long long mustEvalTo) const;
+public:
+	Day21Tree(std::vector<std::string>* input);
+	~Day21Tree();
 };
