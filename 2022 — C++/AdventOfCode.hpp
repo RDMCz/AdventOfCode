@@ -47,6 +47,7 @@ public:
 	const void day21();
 	const void day22part1();
 	const void day22part2();
+	const void day25part1();
 };
 
 class Day07Directory {

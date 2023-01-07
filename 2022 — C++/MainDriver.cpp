@@ -34,5 +34,6 @@ int main() {
 	//aoc.day21();
 	//aoc.day22part1();
 	//aoc.day22part2();
+	aoc.day25part1();
 	return 0;
 }
