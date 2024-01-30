@@ -128,8 +128,8 @@ func day14() {
 	fmt.Println("Part 1:", result)
 
 	// Part 2
-	cycles := 1000000000
-	for cycle := 0; cycle < cycles; cycle++ {
+	nCycles := 1000000000
+	for cycle := 0; cycle < nCycles; cycle++ {
 		day14north(&platform, xLen, yLen)
 		day14west(&platform, xLen, yLen)
 		day14south(&platform, xLen, yLen)

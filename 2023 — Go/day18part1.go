@@ -73,7 +73,6 @@ func day18part1() {
 			if charStr == "." {
 				if isInsideTrench {
 					result++
-				} else {
 				}
 			} else {
 				result++
