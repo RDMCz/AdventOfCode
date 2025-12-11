@@ -43,7 +43,7 @@ function day19.part2()
     local result = 0
     local towels = {}
     local row_n = 0
-    local cache_pseudo_set = {}
+    local cache = {}
     for line in util.get_input_lines("day19") do
         row_n = row_n + 1
         if row_n == 1 then
@@ -51,7 +51,7 @@ function day19.part2()
                 table.insert(towels, towel)
             end
         elseif row_n >= 3 then
-            result = result + day19.part2impl(line, towels, cache_pseudo_set)
+            result = result + day19.part2impl(line, towels, cache)
         end
     end
     print("Part 2: " .. result)
